@@ -1,0 +1,40 @@
+{
+    "title": {
+        "caption": "About you",
+        "title": "Your name and date of birth"
+    },
+    "partOf": {
+        "title": "Adult disability payment",
+        "link": "/"
+    },
+    "components": [
+        "In this section, we want to find out more about you.",
+        {
+            "id": "first-name",
+            "name": "first-name",
+            "type": "text",
+            "label": "First Name",
+            "required": true
+        },
+        {
+            "id": "last-name",
+            "name": "last-name",
+            "type": "text",
+            "label": "Last Name",
+            "required": true
+        },
+        {
+            "id": "date-of-birth",
+            "name": "date-of-birth",
+            "type": "date",
+            "label": "What is your date of birth?",
+            "hintText": "For example, 31 3 1980",
+            "required": true,
+            "maxDate": "+0 days",
+            "multiple": true
+        }
+    ],
+    "nextButton": true,
+    "backButton": true,
+    "nextPage": "/about-you/nino"
+}

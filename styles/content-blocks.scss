@@ -1,0 +1,141 @@
+.ds_cb__inner {
+    position: relative;
+}
+
+// colors
+$colors: (
+    'white'     $ds_colour__white       'normal',
+    'grey'      $ds_colour__grey--light 'normal',
+    'blue'      $ds_colour__blue        'reversed',
+    'darkblue'  $ds_colour__blue--darker 'reversed',
+    'teal'      $ds_colour__teal        'dark',
+    'darkteal'  $ds_colour__dark-teal   'reversed',
+    'green'     $ds_colour__green       'dark',
+    'darkgreen' $ds_colour__dark-green  'reversed',
+    'orange'    $ds_colour__orange      'dark',
+    'red'       $ds_colour__red         'reversed',
+    'pink'      $ds_colour__pink        'reversed',
+    'purple'    $ds_colour__purple      'reversed',
+    'brown'     $ds_colour__brown       'reversed',
+    'black'     $ds_colour__black       'black'
+);
+%texttheme-reversed {
+    color: white;
+
+    a:not(:hover):not(:focus):not(.ds_button) {
+        color: currentColor;
+        text-decoration: underline;
+    }
+
+    // Button theming
+    .ds_button:not(:hover):not(:focus) {
+        background-color: transparent;
+        color: currentColor;
+        outline: 2px solid currentColor;
+        outline-offset: -2px;
+    }
+    .ds_button:hover:not(:focus) {
+        background-color: rgba($ds_colour__black, 20%);
+        color: currentColor;
+        outline: 2px solid currentColor;
+        outline-offset: -2px;
+    }
+}
+
+%texttheme-dark {
+    color: $ds_colour__black;
+
+    a:not(:hover):not(:focus):not(.ds_button) {
+        color: currentColor;
+        text-decoration: underline;
+    }
+
+    // Button theming
+    .ds_button:not(:hover):not(:focus) {
+        background-color: transparent;
+        color: currentColor;
+        outline: 2px solid currentColor;
+        outline-offset: -2px;
+    }
+    .ds_button:hover:not(:focus) {
+        background-color: rgba($ds_colour__white, 20%);
+        color: currentColor;
+        outline: 2px solid currentColor;
+        outline-offset: -2px;
+    }
+}
+
+%texttheme-black {
+    color: $ds_colour__white;
+
+    a:not(:hover):not(:focus):not(.ds_button) {
+        color: currentColor;
+        text-decoration: underline;
+    }
+
+    // Button theming
+    .ds_button:not(:hover):not(:focus) {
+        background-color: transparent;
+        color: currentColor;
+        outline: 2px solid currentColor;
+        outline-offset: -2px;
+    }
+    .ds_button:hover:not(:focus) {
+        background-color: rgba($ds_colour__white, 20%);
+        color: currentColor;
+        outline: 2px solid currentColor;
+        outline-offset: -2px;
+    }
+}
+
+.sss_section {
+    @include ds_responsive-margin(4, top);
+    @include ds_responsive-margin(4, bottom);
+
+    &--has-background {
+        @include ds_responsive-padding(4, top);
+        @include ds_responsive-padding(4, bottom);
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            a:not(:hover):not(:focus) {
+                text-decoration: underline;
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6,
+        ul, ol, dl,
+        blockquote, p, address,
+        table,
+        fieldset, figure,
+        pre {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @each $color in $colors {
+        $name: nth($color, 1);
+        $hex: nth($color, 2);
+        $texttheme: nth($color, 3);
+
+        &--#{$name} {
+            background-color: #{$hex};
+
+            @if ($texttheme == 'reversed') {
+                @extend %texttheme-reversed;
+            }
+
+            @if ($texttheme == 'dark') {
+                @extend %texttheme-dark;
+            }
+
+            @if ($texttheme == 'black') {
+                @extend %texttheme-black;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@import './imports';
+@import './fonts';
+
+@import '../node_modules/@scottish-government/design-system/src/design-system';
+
+@import './content-blocks.scss';
+
+@import '@/components/SiteHeader';
+@import '@/components/SiteNavigation';
+@import '@/components/SiteFooter';
+@import '@/components/Details';
+@import '@/components/Wrapper';
+@import '@/components/SectionHeader';
+@import '@/components/Grid';
+
+.ds_question {
+    @include ds_responsive-spacing(4, 'margin', bottom);
+
+    .ds_input__wrapper {
+        @include ds_responsive-spacing(1, 'margin', bottom);
+    }
+}
+
+fieldset.ds_question {
+    & > legend.ds_label {
+        float: left;
+        display: block;
+        width: 100%;
+
+        & + *::before {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.ds_snackbar{
+    padding: 0.5rem 0;
+    background-color: #333333;
+  }
+
+.ds_snackbar__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    .ds_icon {
+        border: 1px solid red;
+        cursor: pointer;
+    }
+}
