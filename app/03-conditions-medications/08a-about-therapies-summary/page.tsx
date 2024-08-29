@@ -13,6 +13,7 @@ import Radios from '@/components/Radio';
 import Question from '@/components/Question';
 import TextArea from '@/components/TextArea';
 import SummaryCard from '@/components/SummaryCard';
+import SnackBar from '@/components/SnackBar';
 
 /**
  * The document structure
@@ -27,7 +28,7 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
             answer: 'Name of treatment',
             actions: [{
                 label: 'Change',
-                action: '#',
+                action: './09-add-therapies',
             }],
         },
         {
@@ -35,7 +36,7 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
             answer: 'Every day',
             actions: [{
                 label: 'Change',
-                action: '#',
+                action: './09-add-therapies',
             }],
         },
         {
@@ -43,7 +44,7 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
             answer: '45 minutes',
             actions: [{
                 label: 'Change',
-                action: '#',
+                action: './09-add-therapies',
             }],
         },
     ];
@@ -53,7 +54,7 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
             answer: 'Name of treatment',
             actions: [{
                 label: 'Change',
-                action: '#',
+                action: './09-add-therapies',
             }],
         },
         {
@@ -61,7 +62,7 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
             answer: 'Every week',
             actions: [{
                 label: 'Change',
-                action: '#',
+                action: './09-add-therapies',
             }],
         },
         {
@@ -69,12 +70,13 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
             answer: '2 hours',
             actions: [{
                 label: 'Change',
-                action: '#',
+                action: './09-add-therapies',
             }],
         },
     ];
     return (
         <>
+            <SnackBar text="You have added 'My treatment or therapies'" />
             <Wrapper>
                 <SectionHeader
                     link="/"
@@ -94,6 +96,18 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
                 </ul>
             </Wrapper>
             <Wrapper>
+                <ButtonGroup>
+                    <Button
+                        variants="secondary"
+                        icon="chevron_right"
+                        iconSide="right"
+                        href="./09-add-therapies"
+                    >
+                        Add treatment
+                    </Button>
+                </ButtonGroup>
+            </Wrapper>
+            <Wrapper>
                 <SummaryCard
                     title="Treatment 01"
                     items={listItems}
@@ -104,7 +118,7 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
                         },
                         {
                             label: 'Change',
-                            action: '#',
+                            action: './09-add-therapies',
                         },
                     ]}
                 />
@@ -118,22 +132,10 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
                         },
                         {
                             label: 'Change',
-                            action: '#',
+                            action: './09-add-therapies',
                         },
                     ]}
                 />
-            </Wrapper>
-            <Wrapper>
-                <ButtonGroup>
-                    <Button
-                        variants="secondary"
-                        icon="chevron_right"
-                        iconSide="right"
-                        href="#"
-                    >
-                        Add medications
-                    </Button>
-                </ButtonGroup>
             </Wrapper>
             <Wrapper>
                 <form>
