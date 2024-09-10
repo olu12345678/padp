@@ -76,7 +76,7 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
     ];
     return (
         <>
-            <SnackBar text="You have added 'My treatment or therapies'" />
+            <SnackBar text="You have added 'My treatment or therapy'" />
             <Wrapper>
                 <SectionHeader
                     link="/"
