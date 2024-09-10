@@ -103,7 +103,7 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
                         iconSide="right"
                         href="./09-add-therapies"
                     >
-                        Add treatment
+                        Add treatment or therapy
                     </Button>
                 </ButtonGroup>
             </Wrapper>
