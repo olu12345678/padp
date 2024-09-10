@@ -100,7 +100,6 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
                     </Button>
                     <Button
                         variants="secondary"
-
                         iconSide="left"
                         href="./03-add-condition"
                     >
