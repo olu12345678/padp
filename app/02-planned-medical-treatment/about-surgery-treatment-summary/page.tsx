@@ -107,7 +107,7 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
                         variants="secondary"
                         icon="chevron_right"
                         iconSide="right"
-                        href="#"
+                        href="./about-planned-surgery-treatment"
                     >
                         Add surgery or treatment
                     </Button>
