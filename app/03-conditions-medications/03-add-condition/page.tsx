@@ -99,13 +99,6 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
                         Back
                     </Button>
                     <Button
-                        variants="secondary"
-                        iconSide="left"
-                        href="./03-add-condition"
-                    >
-                        Add another condition or symptom
-                    </Button>
-                    <Button
                         icon="chevron_right"
                         href="./02a-about-conditions-summary"
                     >

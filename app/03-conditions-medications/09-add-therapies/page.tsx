@@ -51,13 +51,6 @@ const StayHospitalCareHomeLegalDetention:React.FC = function StayHospitalCareHom
                         Back
                     </Button>
                     <Button
-                        variants="secondary"
-                        iconSide="left"
-                        href="./09-add-therapies"
-                    >
-                        Add another treatment or therapy
-                    </Button>
-                    <Button
                         icon="chevron_right"
                         href="./08a-about-therapies-summary"
                     >
